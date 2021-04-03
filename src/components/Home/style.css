@@ -1,0 +1,7 @@
+.mainHomeContainer{
+    background-color: rgb(181, 240, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
