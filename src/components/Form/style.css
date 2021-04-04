@@ -21,7 +21,7 @@
 
 }
 
-.inputs:focus, .deleteButton:focus{
+.inputs:focus, .deleteButton:focus, .editButton:focus{
     outline: none;
 }
 
