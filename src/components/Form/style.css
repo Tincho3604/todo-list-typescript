@@ -95,9 +95,11 @@
     @media (max-width: 500px) and (min-width: 250px) {
         .mainFormContainer{
         width: 80vw;
+        height: 70vh;
         }
         .mainFormContainer input, select{
-            width: 30vw;
+            width: 50vw;
+            height: 7vh;
         }
         .mainFormContainer h1 {
             font-size: 25px;
