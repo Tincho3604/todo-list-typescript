@@ -6,7 +6,7 @@
 * yarn install
 * yarn start
 
-The tools you used to create your project
+The tools I used to create this project:
 - [Swal] (https://sweetalert.js.org/guides/) - Custom Modal used.
 - [Typescript] (https://www.typescriptlang.org/) - Language used.
 - [React.js] (https://es.reactjs.org/) - Framework used.
