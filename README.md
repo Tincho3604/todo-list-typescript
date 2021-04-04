@@ -1,7 +1,7 @@
 # To Do list
 ## Task application, developed with typescript, to practice and begin to develop the full potential of this language.
 
-_Starting_
+
 * git clone
 * yarn install
 * yarn start
