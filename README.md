@@ -2,6 +2,8 @@
 ## Task application, developed with typescript, to practice and begin to develop the full potential of this language.
 
 
+### Installation adn Starting 🚀🔧
+
 * git clone
 * yarn install
 * yarn start
