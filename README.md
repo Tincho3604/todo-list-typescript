@@ -9,9 +9,9 @@
 Built with 🛠️
 Mention the tools you used to create your project
 
-[Swal] (https://sweetalert.js.org/guides/) - Custom Modal used.
-[Typescript] (https://www.typescriptlang.org/) - Language used.
-[React.js] (https://es.reactjs.org/) - Framework used.
+- [Swal] (https://sweetalert.js.org/guides/) - Custom Modal used.
+- [Typescript] (https://www.typescriptlang.org/) - Language used.
+- [React.js] (https://es.reactjs.org/) - Framework used.
 
 Authors ✒️
 Project carried out by myself.
