@@ -9,6 +9,7 @@
     width: 20vw;
     height: 40vh;
     border-radius: 15px;
+    margin-top: 100px;
 }
 
 .mainFormContainer input, select{
@@ -20,7 +21,7 @@
 
 }
 
-.inputs:focus{
+.inputs:focus, .deleteButton:focus{
     outline: none;
 }
 
@@ -30,7 +31,7 @@
     color: rgb(0, 0, 0);
 }
 
-.inputs {
+.inputs, .deleteButton, .editButton {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -41,7 +42,25 @@
     -webkit-transition-property: transform;
     transition-property: transform;
     }
-.inputs:hover, .inputs:focus, .inputs:active {
+.inputs:hover,
+.deleteButton:hover, 
+.editButton:hover,
+.inputs:focus,
+.deleteButton:focus,
+.editButton:focus,
+.inputs:active,
+.deleteButton:active,
+.editButton:active
+{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    }
+
+    #taskSend{
+        border: none;
+        background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,119,252,1) 0%, rgba(145,144,237,1) 100%);
+        color: rgb(255, 255, 255);
+        letter-spacing: 5px;
+        border-radius: 5px;
     }
