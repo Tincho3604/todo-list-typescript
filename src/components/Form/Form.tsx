@@ -1,6 +1,7 @@
 import React,{ChangeEvent, useState} from 'react';
 import {Itask} from '../../interfaces/interfaces';
 import Table from '../Table/Table';
+import Modal from '../Modal/Modal';
 import './style.css';
 
 const Form = () => {
@@ -64,10 +65,12 @@ const clearFields = () => {
             </select>
             <input type="submit" name="send" id="taskSend" className="inputs" value="Add task" onClick={addTask}/>
     </div>
-
+    
+    {toDoList.length === 0 ?  <Modal/> : 
     <Table 
     tasks={toDoList}
     recover={recover}/>
+}
 </>
     
     )

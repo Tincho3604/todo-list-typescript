@@ -18,11 +18,11 @@ const Table = ({tasks,recover}:Props) => {
   }
   
 
+
   const changeStatus = (id:number) => {
     recover(tasks?.filter((item:Itask) =>  (item.id === id && item.status === "Done") ? item.status =  "Pending" : item.status = 'Done'))
     swal("Good job!", "You change the task status!", "success");
   } 
-
 
 return(
 <>

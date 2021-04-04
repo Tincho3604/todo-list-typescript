@@ -31,7 +31,7 @@
     color: rgb(0, 0, 0);
 }
 
-.inputs, .deleteButton, .editButton {
+.inputs, .deleteButton, .editButton, .modalContainer {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -45,12 +45,15 @@
 .inputs:hover,
 .deleteButton:hover, 
 .editButton:hover,
+.modalContainer:hover,
 .inputs:focus,
 .deleteButton:focus,
 .editButton:focus,
+.modalContainer:focus,
 .inputs:active,
 .deleteButton:active,
-.editButton:active
+.editButton:active,
+.modalContainer:active
 {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
