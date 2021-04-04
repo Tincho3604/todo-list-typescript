@@ -2,6 +2,7 @@ import React,{ChangeEvent, useState} from 'react';
 import {Itask} from '../../interfaces/interfaces';
 import Table from '../Table/Table';
 import Modal from '../Modal/Modal';
+import {validationTask, validationDate} from '../../validations/validations';
 import './style.css';
 
 const Form = () => {
@@ -17,6 +18,12 @@ const Form = () => {
     const recover = (info:Itask[]):void  => {
         setTodoList(info)
 }
+    const editTask = (info:Itask[]):void => {  
+            setId(info[0].id)
+            setTask(info[0].taskName)
+            setDate(info[0].date)
+            setStatus(info[0].status)
+    }
 
 const getValue = (event: ChangeEvent<HTMLInputElement>): void => {
         event.preventDefault()
@@ -42,10 +49,13 @@ const getValueSelect = (event:React.ChangeEvent<HTMLSelectElement>): void => {
 
 
 const addTask = () => {
+    if(validationTask(task) && validationDate(date)){
     setId(id+1)
     const newTask = {id:id, taskName:task, date:date, status:status}
-    setTodoList([...toDoList, newTask])
+    const filerArrayTask:Itask[] = toDoList.filter((item:Itask) => item.id !== newTask.id)
+    setTodoList([...filerArrayTask, newTask])
     clearFields();
+    }
 }
 
 const clearFields = () => {
@@ -69,8 +79,11 @@ const clearFields = () => {
     {toDoList.length === 0 ?  <Modal/> : 
     <Table 
     tasks={toDoList}
-    recover={recover}/>
+    recover={recover}
+    editTask={editTask}
+    />
 }
+
 </>
     
     )

@@ -67,3 +67,40 @@
         letter-spacing: 5px;
         border-radius: 5px;
     }
+
+
+    @media (max-width: 1800px) and (min-width: 800px) {
+        .mainFormContainer{
+            width: 30vw;
+            }
+            .mainFormContainer input, select{
+                width: 20vw;
+            }
+    }
+
+    @media (max-width: 800px) and (min-width: 500px) {
+        .mainFormContainer{
+        width: 50vw;
+        }
+        .mainFormContainer input, select{
+            width: 30vw;
+        }
+        .mainFormContainer h1 {
+            font-size: 25px;
+            margin-top: 20px;
+        }
+    }
+
+
+    @media (max-width: 500px) and (min-width: 250px) {
+        .mainFormContainer{
+        width: 80vw;
+        }
+        .mainFormContainer input, select{
+            width: 30vw;
+        }
+        .mainFormContainer h1 {
+            font-size: 25px;
+            margin-top: 20px;
+        }
+    }

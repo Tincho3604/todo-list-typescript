@@ -38,7 +38,7 @@ table th {
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(201,106,150,1) 0%, rgba(252,70,70,1) 0%, rgba(218,94,123,1) 100%, rgba(145,144,237,1) 100%);
     border:none;
-    width: 5vw;
+    width: 10vw;
     height: 3vh;
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -51,7 +51,7 @@ table th {
     background: rgb(252,70,70);
     background: radial-gradient(circle, rgba(252,70,70,1) 0%, rgba(201,106,150,1) 0%, rgba(218,94,123,1) 0%, rgba(145,144,237,1) 0%, rgba(9,48,244,1) 100%);
     border:none;
-    width: 5vw;
+    width: 10vw;
     height: 3vh;
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -60,7 +60,28 @@ table th {
     letter-spacing: 5px;
 }
 
-@media screen and (max-width: 885px) {
+@media (max-width: 1700px) and (min-width: 1200px) {
+    .deleteButton{
+        width: 10vw;
+    }
+    .editButton{
+        width: 10vw;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 885px) {
+    .deleteButton{
+        width: 11vw;
+        font-size: 10px;
+
+    }
+    .editButton{
+        width: 12vw;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 885px){
     table {
         border: 0;
     }
@@ -102,5 +123,29 @@ table tr {
     
     table td:last-child {
         border-bottom: 0;
+    }
+    .deleteButton{
+        width: 15vw;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .editButton{
+        width: 15vw;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media (max-width: 600px) and (min-width: 250px) {
+    .deleteButton{
+        width: 30vw;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .editButton{
+        width: 30vw;
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 }
