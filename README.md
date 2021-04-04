@@ -1,5 +1,5 @@
-To Do list
-Task application, developed with typescript, to practice and begin to develop the full potential of this language.
+# To Do list
+## Task application, developed with typescript, to practice and begin to develop the full potential of this language.
 
 _Enter frontend_
 * cd frontend
