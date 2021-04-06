@@ -9,7 +9,7 @@ const Modal = () => {
 
 return(
     <div className="MainModalContainer">
-            <h1>Tasks Not founds</h1>
+            <h2>Tasks Not founds</h2>
             <img alt="error" src={img} className="modalContainer"/>
     </div>
     )

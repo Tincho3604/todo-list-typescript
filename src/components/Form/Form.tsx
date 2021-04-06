@@ -2,6 +2,7 @@ import React,{ChangeEvent, useState} from 'react';
 import {Itask} from '../../interfaces/interfaces';
 import Table from '../Table/Table';
 import Modal from '../Modal/Modal';
+import swal from 'sweetalert';
 import {validationTask, validationDate} from '../../validations/validations';
 import './style.css';
 
@@ -55,6 +56,9 @@ const addTask = () => {
     const filerArrayTask:Itask[] = toDoList.filter((item:Itask) => item.id !== newTask.id)
     setTodoList([...filerArrayTask, newTask])
     clearFields();
+    swal("Your task has been created!", {
+        icon: "success",
+      });
     }
 }
 
@@ -65,8 +69,11 @@ const clearFields = () => {
 
     return (
         <>
-    <div className="mainFormContainer">
-            <h1>Add a task</h1>
+        <div className="titleContainer">
+            <h1>Task App</h1>
+        </div>
+        <div className="mainFormContainer">
+            <h2>Add a task</h2>
             <input type="text" name="taskName" placeholder="Ingress the task name" id="taskName" className="inputs" onChange={getValue} value={task}/>
             <input type="date" name="taskDate" placeholder="Ingress date" id="taskDate" className="inputs" onChange={getValue} value={date}/>
             <select name="status" id="taskStatus" className="inputs" onChange={getValueSelect}>
@@ -74,7 +81,7 @@ const clearFields = () => {
                 <option value="Done">Done</option>
             </select>
             <input type="submit" name="send" id="taskSend" className="inputs" value="Add task" onClick={addTask}/>
-    </div>
+        </div>
     
     {toDoList.length === 0 ?  <Modal/> : 
     <Table 

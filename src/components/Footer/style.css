@@ -6,10 +6,9 @@
     width: 100vw;
     height: 10vh;
     text-align: center;
+    margin-top: 200px;
 }
-.mainFooterContainer{
-    margin-top: 500px;
-}
+
 .footer img{
 width: 4vw;
 height: 7vh;

@@ -19,7 +19,7 @@ const Table = ({tasks,recover,editTask}:Props) => {
   }
 
   const changeStatus = (id:number) => {
-    swal("Edit Task",`After modifying the task, you can continue adding more`, {
+    swal("Edit Task",`Please complete the form to edit the task`, {
       icon: "success",
     });
     const value = tasks.filter((item:Itask) => item.id === id)

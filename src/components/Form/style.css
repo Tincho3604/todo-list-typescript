@@ -9,9 +9,22 @@
     width: 20vw;
     height: 40vh;
     border-radius: 15px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
-
+.titleContainer {
+background-color: rgb(255, 0, 51);
+width: 38vw;
+border-radius: 45px;
+opacity: 0.6;
+margin-top: 45px;
+}
+.titleContainer h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
 .mainFormContainer input, select{
     width: 10vw;
     height: 4vh;
@@ -25,7 +38,7 @@
     outline: none;
 }
 
-.mainFormContainer h1 {
+.mainFormContainer h2 {
     font-family: 'New Tegomin', serif;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
@@ -67,42 +80,111 @@
         letter-spacing: 5px;
         border-radius: 5px;
     }
-
+    @-webkit-keyframes titleContainer {
+        25% {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+        75% {
+          -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+        }
+      }
+      @keyframes titleContainer {
+        25% {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+        75% {
+          -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+        }
+      }
+      .titleContainer {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      }
+      .titleContainer:hover, .titleContainer:focus, .titleContainer:active {
+        -webkit-animation-name: titleContainer;
+        animation-name: titleContainer;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
 
     @media (max-width: 1800px) and (min-width: 800px) {
         .mainFormContainer{
             width: 30vw;
+            height: 70vh;
             }
             .mainFormContainer input, select{
                 width: 20vw;
+                height: 6vh;
             }
+            .mainFormContainer h2 {
+                font-size: 25px;
+                padding-top: 30px;
+            }
+            .titleContainer {
+                width: 60vw;
+                height: 10vh;
+                border-radius: 10px;
+                }
+                .titleContainer h1{
+                    font-size: 30px;
+                    padding-top: 17px;
+                }
     }
 
     @media (max-width: 800px) and (min-width: 500px) {
         .mainFormContainer{
         width: 50vw;
+        height: 70vh;
         }
         .mainFormContainer input, select{
             width: 30vw;
+            height: 5vh;
         }
-        .mainFormContainer h1 {
+        .mainFormContainer h2 {
             font-size: 25px;
             margin-top: 20px;
         }
+        .titleContainer {
+            width: 60vw;
+            height: 10vh;
+            border-radius: 10px;
+            }
+            .titleContainer h1{
+                font-size: 30px;
+                padding-top: 17px;
+            }
     }
 
 
     @media (max-width: 500px) and (min-width: 250px) {
         .mainFormContainer{
         width: 80vw;
-        height: 70vh;
+        height: 90vh;
         }
         .mainFormContainer input, select{
             width: 50vw;
-            height: 7vh;
+            height: 10vh;
         }
-        .mainFormContainer h1 {
+        .mainFormContainer h2 {
             font-size: 25px;
-            margin-top: 20px;
+            padding-top: 40px;
+        }
+        .titleContainer {
+        width: 60vw;
+        border-radius: 10px;
+        }
+        .titleContainer h1{
+            font-size: 30px;
         }
     }
