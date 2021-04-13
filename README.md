@@ -4,9 +4,9 @@
 
 ### Installation adn Starting 🚀🔧
 ```
-* git clone
-* yarn install
-* yarn start
+git clone
+yarn install
+yarn start
 ```
 
 The tools I used to create this project:
