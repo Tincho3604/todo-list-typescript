@@ -3,10 +3,11 @@
 
 
 ### Installation adn Starting 🚀🔧
-
+```
 * git clone
 * yarn install
 * yarn start
+```
 
 The tools I used to create this project:
 - [Swal] (https://sweetalert.js.org/guides/) - Custom Modal used.
