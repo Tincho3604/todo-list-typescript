@@ -50,7 +50,7 @@ const getValueSelect = (event:React.ChangeEvent<HTMLSelectElement>): void => {
 
 
 const addTask = () => {
-    if(validationTask(task) && validationDate(date)){
+    if(validationDate(date)){
     setId(id+1)
     const newTask = {id:id, taskName:task, date:date, status:status}
     const filerArrayTask:Itask[] = toDoList.filter((item:Itask) => item.id !== newTask.id)
