@@ -28,9 +28,9 @@ margin-top: 45px;
 .mainFormContainer input, select{
     width: 10vw;
     height: 4vh;
-    border: 1px solid black;
     font-family: 'Play', sans-serif;
     font-weight: bold;
+    box-shadow: 1px 1px 5px black;
 
 }
 
@@ -49,11 +49,12 @@ margin-top: 45px;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
+    border-radius: 5px;
+    border:none;
     }
 .inputs:hover,
 .deleteButton:hover, 
@@ -161,13 +162,13 @@ margin-top: 45px;
             border-radius: 10px;
             }
             .titleContainer h1{
-                font-size: 30px;
+                font-size: 20px;
                 padding-top: 17px;
             }
     }
 
 
-    @media (max-width: 500px) and (min-width: 250px) {
+    @media (max-width: 499px) and (min-width: 250px) {
         .mainFormContainer{
         width: 80vw;
         height: 90vh;

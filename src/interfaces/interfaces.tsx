@@ -1,6 +1,7 @@
 export interface Itask {
     id:number;
     taskName: string;
-    date:string;
+    openTimeTask:string;
+    closeTimeTask:string;
     status:string;
 }

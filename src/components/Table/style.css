@@ -5,7 +5,7 @@ table {
     padding: 0;
     width: 80vw;
     table-layout: fixed;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Bebas Neue', cursive;
     margin-top: 50px;
     border:none;
 }
@@ -24,6 +24,7 @@ table tr {
     table td {
     padding: .625em;
     text-align: center;
+    font-size: 25px;
 }
 
 table th {
