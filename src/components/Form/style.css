@@ -25,13 +25,40 @@ margin-top: 45px;
     text-transform: uppercase;
     letter-spacing: 15px;
 }
-.mainFormContainer input, select{
+.mainFormContainer .inputs, select{
     width: 10vw;
     height: 4vh;
     font-family: 'Play', sans-serif;
     font-weight: bold;
     box-shadow: 1px 1px 5px black;
 
+}
+.inputRadioButtons{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 10vh;
+}
+
+#doneStatus{
+    color: rgb(98, 194, 69);
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: bold;
+}
+#pendingStatus{
+    color: rgb(255, 0, 0);
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: bold;
+}
+
+.eachButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'New Tegomin', serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
 }
 
 .inputs:focus, .deleteButton:focus, .editButton:focus{
@@ -124,7 +151,7 @@ margin-top: 45px;
             width: 30vw;
             height: 70vh;
             }
-            .mainFormContainer input, select{
+            .mainFormContainer .inputs, select{
                 width: 20vw;
                 height: 6vh;
             }
@@ -148,7 +175,7 @@ margin-top: 45px;
         width: 50vw;
         height: 70vh;
         }
-        .mainFormContainer input, select{
+        .mainFormContainer .inputs, select{
             width: 30vw;
             height: 5vh;
         }
@@ -173,7 +200,7 @@ margin-top: 45px;
         width: 80vw;
         height: 90vh;
         }
-        .mainFormContainer input, select{
+        .mainFormContainer .inputs, select{
             width: 50vw;
             height: 10vh;
         }

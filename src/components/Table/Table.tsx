@@ -47,7 +47,7 @@ return(
               <td data-label="Id">{item.id}</td>
               <td data-label="Name">{item.taskName}</td>
               <td data-label="Open Time Task">{item.openTimeTask}</td>
-              <td data-label="Close Time Task">{item.status === "Done" ? item.closeTimeTask : ""}</td>
+              <td data-label="Close Time Task">{item.status === "Done" ? item.closeTimeTask : "Task in progress"}</td>
               <td data-label="Status">{item.status === "Done" ? <FcIcons.FcOk/> : <FcIcons.FcHighPriority/>}</td>
               <td data-label="Delete"><button className="deleteButton" onClick={() => deleteTask(item.id)}>Delete</button></td>
               <td data-label="Edit task"><button className="editButton" onClick={() => changeStatus(item.id)}>Edit task</button></td>
