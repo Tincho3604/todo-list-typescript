@@ -1,11 +1,10 @@
-import React from 'react'
 import img from '../../images/not-found.jpg'
 import './style.css'
 
 declare module "*.jpg" {
     const value: any;
 }
-const Modal = () => {
+const ModalError = () => {
 
 return(
     <div className="MainModalContainer">
@@ -15,4 +14,4 @@ return(
     )
 }
 
-export default Modal
+export default ModalError

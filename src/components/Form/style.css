@@ -61,6 +61,15 @@ margin-top: 45px;
     color: rgb(0, 0, 0);
 }
 
+.formMainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
 .inputs:focus, .deleteButton:focus, .editButton:focus{
     outline: none;
 }
