@@ -7,9 +7,7 @@ const Home = () => {
 
 return (
     <div className="mainHomeContainer">
-        
-        <Form/>
-        <Footer/>
+        <ModalEdit/>
     </div>
     )
 } 
