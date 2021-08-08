@@ -36,6 +36,7 @@ const addTask = (name:string, status:string, time:string) => {
     if(validationTask(name)){
         setId(id+1)
         const newTask = {id:id, taskName:name, openTimeTask:time, closeTimeTask:'', status:status}
+        if (status === "Done") newTask.closeTimeTask = moment().format('h:mm:ss a')
         const filerArrayTask = toDoList.filter((item:Itask) => item.id !== newTask.id)
         setTodoList([...filerArrayTask, newTask])
         reset();

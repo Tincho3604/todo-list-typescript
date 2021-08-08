@@ -63,3 +63,76 @@
     font-size: 25px;
     letter-spacing: 5px;
 }
+
+
+
+@media (max-width: 1800px) and (min-width: 800px) {
+    .main-modal-edit-container{
+        width: 30vw;
+        height: 60vh;
+        }
+        .main-modal-edit-container .editInputs, select{
+            width: 20vw;
+            height: 6vh;
+        }
+        .main-modal-edit-container h2 {
+            font-size: 25px;
+            padding-top: 30px;
+        }
+        .titleContainer {
+            width: 60vw;
+            height: 10vh;
+            border-radius: 10px;
+            }
+            .titleContainer h1{
+                font-size: 30px;
+                padding-top: 17px;
+            }
+}
+
+@media (max-width: 800px) and (min-width: 500px) {
+    .main-modal-edit-container{
+    width: 50vw;
+    height: 70vh;
+    }
+    .main-modal-edit-container .editInputs, select{
+        width: 30vw;
+        height: 5vh;
+    }
+    .main-modal-edit-container h2 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .titleContainer {
+        width: 60vw;
+        height: 10vh;
+        border-radius: 10px;
+        }
+        .titleContainer h1{
+            font-size: 20px;
+            padding-top: 17px;
+        }
+}
+
+
+@media (max-width: 499px) and (min-width: 250px) {
+    .main-modal-edit-container{
+    width: 80vw;
+    height: 90vh;
+    }
+    .main-modal-edit-container .editInputs, select{
+        width: 50vw;
+        height: 10vh;
+    }
+    .main-modal-edit-container h2 {
+        font-size: 25px;
+        padding-top: 40px;
+    }
+    .titleContainer {
+    width: 60vw;
+    border-radius: 10px;
+    }
+    .titleContainer h1{
+        font-size: 30px;
+    }
+}

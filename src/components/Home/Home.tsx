@@ -8,6 +8,7 @@ const Home = () => {
 return (
     <div className="mainHomeContainer">
         <Form />
+        <Footer />
     </div>
     )
 } 
