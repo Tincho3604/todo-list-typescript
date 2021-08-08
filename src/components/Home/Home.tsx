@@ -7,7 +7,7 @@ const Home = () => {
 
 return (
     <div className="mainHomeContainer">
-        <ModalEdit/>
+        <Form />
     </div>
     )
 } 

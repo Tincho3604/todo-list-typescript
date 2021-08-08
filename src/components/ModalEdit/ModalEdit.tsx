@@ -1,27 +1,43 @@
 import './style.css'
 import { useForm } from "react-hook-form";
+import {Itask} from '../../interfaces/interfaces';
 
 type FormData = {
     taskName: string;
     status: string;
 };
 
-const ModalEdit = () => {
+interface Props {
+    infoEdit: Itask[];
+    allTask: Itask[];
+    recover(info:Itask[]): void;
+    changeEditMode(): void;
+}
+
+const ModalEdit = ({infoEdit, recover, allTask, changeEditMode}:Props) => {
     const { register, setValue, handleSubmit, formState: { errors } } = useForm<FormData>();
-    const onSubmit = handleSubmit(data => console.log(data))
+    const onSubmit = handleSubmit(data => {
+        
+        infoEdit[0].taskName = data.taskName
+        infoEdit[0].status = data.status
+
+        const filerArrayTask = allTask.filter((item:Itask) => item.id !== infoEdit[0].id)
+        recover([...filerArrayTask, infoEdit[0]])
+        changeEditMode();
+    })
 
     return(
         <div className="main-modal-edit-container">
             <h1>Edit task</h1>
-            <h2>{`Edit the task N ° 1`}</h2>
+            <h2>{`Edit the task N ° ${infoEdit[0].id}`}</h2>
                 <form onSubmit={onSubmit} className="formMainContainer">
                 <div className="main-edit-form-container">
-                    <input  {...register("taskName")} type="text" name="taskName" placeholder="Ingress the task name" id="taskName" className="inputs"/>
-                        <select {...register("status")} name="status" id="taskStatus" className="inputs" >
+                    <input  {...register("taskName")} type="text" name="taskName" placeholder="Ingress the task name" id="taskName" className="editInputs" defaultValue={infoEdit[0].taskName}/>
+                        <select {...register("status")} name="status" id="taskStatus" className="editInputs"  defaultValue={infoEdit[0].status}>
                             <option value="Pending">Pending</option>
                             <option value="Done">Done</option>
                         </select>
-                    <input type="submit" name="send" id="taskSend" className="inputs" value="Edit"/>
+                    <input type="submit" name="send" id="taskSend" className="editInputs" value="Edit"/>
                 </div>
             </form>
         </div>
