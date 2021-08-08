@@ -19,6 +19,9 @@ const Table = ({tasks,recover,editTask}:Props) => {
   }
 
   const changeStatus = (id:number) => {
+    swal(`You are going to edit task N° ${id}!`, {
+      icon: "warning",
+    });
     const value = tasks.filter((item:Itask) => item.id === id)
     editTask(value)
   } 

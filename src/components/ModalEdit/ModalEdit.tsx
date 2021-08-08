@@ -1,6 +1,9 @@
 import './style.css'
 import { useForm } from "react-hook-form";
 import {Itask} from '../../interfaces/interfaces';
+import swal from 'sweetalert';
+import moment from 'moment';
+import {validationTask} from '../../validations/validations';
 
 type FormData = {
     taskName: string;
@@ -17,13 +20,18 @@ interface Props {
 const ModalEdit = ({infoEdit, recover, allTask, changeEditMode}:Props) => {
     const { register, setValue, handleSubmit, formState: { errors } } = useForm<FormData>();
     const onSubmit = handleSubmit(data => {
-        
+        if(validationTask(data.taskName)){
         infoEdit[0].taskName = data.taskName
         infoEdit[0].status = data.status
+        if (data.status === "Done") infoEdit[0].closeTimeTask = moment().format('h:mm:ss a')
 
         const filerArrayTask = allTask.filter((item:Itask) => item.id !== infoEdit[0].id)
         recover([...filerArrayTask, infoEdit[0]])
+        swal("Your task has been edited!", {
+            icon: "success",
+        });
         changeEditMode();
+        }
     })
 
     return(

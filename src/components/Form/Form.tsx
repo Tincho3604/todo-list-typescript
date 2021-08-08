@@ -20,7 +20,6 @@ type FormData = {
 const Form = () => {
 
     const [id, setId] = useState<number>(1);
-    const [name, setName] = useState<string>('');
     const [toDoList, setTodoList] = useState<Itask[]>([]);
     const [editMode, setEditMode] = useState<Boolean>(false);
     const [editInfo, setEditInfo] = useState<Itask[]>([]);
@@ -34,11 +33,13 @@ const onSubmit = handleSubmit(data => {
 
 
 const addTask = (name:string, status:string, time:string) => {
-    setId(id+1)
-    const newTask = {id:id, taskName:name, openTimeTask:time, closeTimeTask:'', status:status}
-    const filerArrayTask = toDoList.filter((item:Itask) => item.id !== newTask.id)
-    setTodoList([...filerArrayTask, newTask])
-    reset();
+    if(validationTask(name)){
+        setId(id+1)
+        const newTask = {id:id, taskName:name, openTimeTask:time, closeTimeTask:'', status:status}
+        const filerArrayTask = toDoList.filter((item:Itask) => item.id !== newTask.id)
+        setTodoList([...filerArrayTask, newTask])
+        reset();
+    }
 }
 
     const recover = (info:Itask[]):void  => {
